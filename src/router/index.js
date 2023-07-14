@@ -1,15 +1,40 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Hombre from '@/views/Hombre.vue'
+import Mujer from '@/views/Mujer.vue'
+import Electronica from '@/views/Electronica.vue'
+import NotFound from '@/views/NotFound.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'Home',
     component: HomeView
   },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: NotFound
+  },
+  {
+    path: '/hombre',
+    name: 'Men',
+    component: Hombre
+  },
+  {
+    path: '/mujer',
+    name: 'Women',
+    component: Mujer
+  },
+  {
+    path: '/electronica',
+    name: 'Technology',
+    component: Electronica
+  },
+  
   {
     path: '/about',
     name: 'about',
